@@ -17,7 +17,11 @@ namespace LiqPay.Controllers
             return View(LiqPayHelper.GetLiqPayModel(Guid.NewGuid().ToString()));
         }
 
-        [HttpPost]
+        /// <summary>
+        /// На цю сторінку LiqPay відправляє результат оплати. Вона вказана в data.result_url
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]        
         public ActionResult Redirect()
         {
             // --- Перетворюю відповідь LiqPay в Dictionary<string, string> для зручності:

@@ -6,6 +6,9 @@ using System.Web;
 
 namespace LiqPay.Models
 {
+    /// <summary>
+    /// Data параметри LiqPay (більше параметрів тут: https://www.liqpay.ua/documentation/api/aquiring/checkout/doc)
+    /// </summary>
     public class LiqPayCheckout
     {
         // --- Обов'язкові параметри:
