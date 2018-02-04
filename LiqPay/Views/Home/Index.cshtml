@@ -1,0 +1,18 @@
+﻿@model LiqPay.Models.LiqPayCheckoutFormModel
+@{
+    ViewBag.Title = "Liqpay Test";
+}
+
+<h2>Juicy liquid payments 😋</h2>
+
+<form method="POST" accept-charset="utf-8" action="https://www.liqpay.ua/api/3/checkout">
+    <input type="hidden" name="data" value="@Model.Data" />
+    <input type="hidden" name="signature" value="@Model.Signature" />
+    <button style="border: none !important; display:inline-block !important;text-align: center !important;padding: 7px 20px !important;
+                                    color: #fff !important; font-size:16px !important; font-weight: 600 !important; font-family:OpenSans, sans-serif; cursor: pointer !important; border-radius: 2px !important;
+                                    background: rgb(122,183,43) !important;" onmouseover="this.style.opacity='0.5';" onmouseout="this.style.opacity='1';">
+        <img src="https://static.liqpay.ua/buttons/logo-small.png" name="btn_text"
+             style="margin-right: 7px !important; vertical-align: middle !important;" />
+        <span style="vertical-align:middle !important">Pay</span>
+    </button>
+</form>
